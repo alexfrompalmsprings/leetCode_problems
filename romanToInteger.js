@@ -19,7 +19,7 @@ C can be placed before D (500) and M (1000) to make 400 and 900.
 Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999.
 */
 
-var romanToInt = function(s) {
+var romanToInt = function (s) {
   /*
   O -  a number
   I - a string
@@ -27,14 +27,44 @@ var romanToInt = function(s) {
   E - none mentioned
   */
 
+  var romanNums = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000
+  }
 
+  var result = 0;
 
+  for (var i = 0; s.length; i++) {
+    //look at the character at the 1st index
+    var currentLetter = romanNums[s.charAt(i)];
+    //look at the character at the 2nd index
+    var nextLetter = romanNums[s.charAt(i + 1)];
+
+    //conditional statement to add the numbers to result
+    if (nextLetter) {
+      if (currentLetter >= nextLetter) {
+        result += currentLetter;
+      } else {
+        result += (nextLetter - currentLetter);
+        i++;
+      }
+    } else {
+      result += currentLetter;
+    }
+  }
+
+  return result;
 };
 
 
 
 var inputOne = "III"; //Output: 3
-console.log(romanToInt(inputOne))
+console.log(romanToInt('III'))
 
 var inputTwo = "IV" //Output: 4
 console.log(romanToInt(inputTwo))
@@ -44,8 +74,3 @@ console.log(romanToInt(inputThree))
 
 var inputFour = "MCMXCIV" //Output: 1994
 console.log(romanToInt(inputFour))
-
-
-
-
-
