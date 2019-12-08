@@ -38,16 +38,25 @@ var isPalindrome = function (x) {
     return false;
   };
 
-
-
-
-
-
-
-
+  // extra func to check if the number could be reversed
+  return x === reversedInteger(x);
 };
 
-var inputOne = -121
+let reversedInteger = function(x) {
+
+    var reversed = 0;
+    //while lopp
+    while (x > 0) {
+        //clever method to separate the numbers
+        reversed = (reversed * 10) + (x % 10);
+        // round the numbers once they get separated
+        x = Math.floor(x / 10);
+    }
+    //return
+    return reversed;
+};
+
+var inputOne = 121
 console.log(isPalindrome(inputOne)) //Output: true
 
 var inputTwo = 2100
