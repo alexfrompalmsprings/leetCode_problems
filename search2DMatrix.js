@@ -9,7 +9,6 @@ var searchMatrix = function (matrix, target) {
 
   // long loop way to do things
   for(var i = 0; i < flatten.length; i++){
-    console.log(flatten[i])
     if(flatten[i]=== target){
       return true;
     }
@@ -25,4 +24,3 @@ var matrixTest = [
 
 var targetTest = 14;
 var test = searchMatrix(matrixTest, targetTest);
-console.log(test);
