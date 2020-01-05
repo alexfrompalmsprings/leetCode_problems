@@ -14,6 +14,22 @@
  *
 */
 
+
 var bubbleSort = function(array) {
-  // Your code here.
+
+  // we make two loops in order to get our numbers swapping
+  for(var i = 0; i < array.length; i++){
+    for(var j = 0; j < array.length; i++){
+
+      // conditional statement that is going to compare the the numbers
+      if(array[j] > array[j+1]){
+        //! this is where the magic happens; we about to use the SWAP METHOD
+
+      }
+    }
+  }
+
 };
+
+var test = bubbleSort([2, 1, 3, 6, 5, 4]);
+console.log(test) // yields [1, 2, 3, 4, 5, 6]
