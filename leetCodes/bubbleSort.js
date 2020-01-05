@@ -14,12 +14,11 @@
  *
  */
 
-
 var bubbleSort = function (array) {
 
   // we make two loops in order to get our numbers swapping
   for (var i = 0; i < array.length; i++) {
-    for (var j = 0; j < array.length; i++) {
+    for (var j = 0; j < array.length; j++) {
 
       // conditional statement that is going to compare the the numbers
       if (array[j] > array[j + 1]) {
@@ -31,6 +30,7 @@ var bubbleSort = function (array) {
         console.log('this is the temp var', temp)
         array[j] = array[j + 1]
         array[j + 1] = temp
+
       }
     }
   }
@@ -38,4 +38,4 @@ var bubbleSort = function (array) {
 };
 
 var test = bubbleSort([2, 1, 3, 6, 5, 4]);
-console.log(test) // yields [1, 2, 3, 4, 5, 6]
+console.log('final', test) // yields [1, 2, 3, 4, 5, 6]
