@@ -9,4 +9,4 @@ You might be wondering about the 100, right ? Well ...during college I came out 
 
 So that's the goal!! 🎡
 
-90 problems to go.... Wow!!
+88 problems to go....
